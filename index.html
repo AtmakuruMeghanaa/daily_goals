@@ -8,6 +8,53 @@
 </head>
 <body>
     <div class="container">
+        <div class="task-section" id="task-container">
+            <div class="header">
+                <button id="prev-day-btn">&lt; Previous Day</button>
+                <h2 id="day-display"></h2>
+                <button id="next-day-btn">Next Day &gt;</button>
+            </div>
+            <ul id="task-list">
+                </ul>
+            <div class="save-button-container">
+                <button id="save-btn">Save Progress</button>
+            </div>
+        </div>
+        <div class="progress-section">
+            <div id="month-navigation">
+                <select id="month-select"></select>
+            </div>
+            <div id="calendar-grid" class="hidden">
+                </div>
+
+            <div id="day-type-selection" class="hidden">
+                <p>Is this a working day or a holiday?</p>
+                <div class="day-type-buttons">
+                    <button id="working-day-btn">Working Day</button>
+                    <button id="holiday-btn">Holiday</button>
+                </div>
+            </div>
+            
+            <h3>Monthly Summary</h3>
+            <div id="monthly-progress-bar-container">
+                <div id="monthly-progress-bar"></div>
+            </div>
+            <p id="monthly-progress-percentage">0% completed</p>
+            <div id="monthly-feedback"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Daily Learning Goals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
         <div class="task-section">
             <div class="header">
                 <h2>Daily Tasks</h2>
