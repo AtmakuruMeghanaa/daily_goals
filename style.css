@@ -1,0 +1,181 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.task-section, .progress-section {
+    padding: 30px;
+    flex: 1;
+}
+
+.task-section {
+    border-right: 1px solid #eee;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0 10px;
+}
+
+.header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 5px 10px;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 15px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-time {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+.task-activity {
+    text-align: left;
+}
+
+#task-list input[type="checkbox"] {
+    justify-self: end;
+}
+
+.save-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#save-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#month-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.calendar-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: bold;
+}
+
+.calendar-day:hover {
+    background-color: #e9e9e9;
+}
+
+.calendar-day.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.calendar-day.completed {
+    background-color: #81c784;
+    color: white;
+}
+
+/* New styles for day-type selection */
+#day-type-selection {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.day-type-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.day-type-buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+/* Monthly progress bar styles */
+#monthly-progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#monthly-progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #4CAF50;
+    transition: width 0.5s ease-in-out;
+}
+
+#monthly-feedback {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none !important;
+}
